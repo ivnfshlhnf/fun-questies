@@ -44,6 +44,7 @@ const HomeScreen = () => {
     return (
       <ListItem>
         <Layout style={{ flex: 1, justifyContent: 'center' }}>
+          <Text>{item.name}</Text>
           <Button
             onPress={() =>
               navigation.navigate('Details', {
@@ -52,7 +53,7 @@ const HomeScreen = () => {
               })
             }
           >
-            {item.name}
+            click!
           </Button>
         </Layout>
       </ListItem>
