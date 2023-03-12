@@ -2,6 +2,7 @@
   "expo": {
     "name": "fun-questies",
     "slug": "fun-questies",
+    "scheme": "fun-questies",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,7 +33,8 @@
         "babel": {
           "include": ["@ui-kitten/components"]
         }
-      }
+      },
+      "bundler": "metro"
     },
     "extra": {
       "eas": {

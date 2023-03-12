@@ -1,7 +1,7 @@
 {
   "name": "fun-questies",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "index.js",
   "scripts": {
     "start": "expo start",
     "start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address 'Ethernet 4' | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') expo start",
@@ -12,12 +12,12 @@
   "dependencies": {
     "@eva-design/eva": "^2.1.1",
     "@expo/webpack-config": "^0.17.2",
-    "@react-navigation/bottom-tabs": "^6.5.5",
-    "@react-navigation/native": "^6.1.4",
-    "@react-navigation/native-stack": "^6.9.10",
     "@ui-kitten/components": "^5.1.2",
     "@ui-kitten/eva-icons": "^5.1.2",
     "expo": "~47.0.12",
+    "expo-constants": "~14.0.2",
+    "expo-linking": "~3.3.1",
+    "expo-router": "^1.2.2",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
