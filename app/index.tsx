@@ -10,6 +10,8 @@ import {
   TopNavigation,
 } from '@ui-kitten/components';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { AuthContext, useAuth } from '../context/auth/provider';
+import { UserContextType } from '../types/@types.user';
 
 type ListData = {
   id: number;
@@ -48,6 +50,8 @@ const DATA = [
 const HomeScreen = () => {
   const router = useRouter();
 
+  const { user, signOut } = useAuth();
+
   const renderListItems = ({ item }: { item: ListData }) => {
     return (
       <ListItem>
@@ -79,6 +83,8 @@ const HomeScreen = () => {
     <Layout style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 1 }}>
         <TopNavigation title="Home" alignment="center" />
+        <Text>has login? {user ? user.name : 'no'}</Text>
+        <Button onPress={() => signOut()}>click!</Button>
         <List
           data={[...DATA, ...DATA, ...DATA, ...DATA]}
           renderItem={renderListItems}
